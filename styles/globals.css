@@ -79,3 +79,25 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.TaskItem-tiptap {
+  @apply list-none flex items-center gap-5 data-[checked=true]:text-gray-500;
+}
+.TaskItem-tiptap label {
+  @apply h-5 w-5 border border-purple-500 rounded-md ;
+}
+.TaskItem-tiptap input {
+  @apply hidden;
+}
+
+.my-custom-class {
+  @apply flex flex-col justify-center p-4;
+}
